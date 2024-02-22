@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:laba2/screan/login.dart';
 
-import 'Laba2.dart';
+import 'screan/authorization.dart';
 
 
 
@@ -83,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      body: laba1(),
+      body: Login(),
     );
   }
 }
