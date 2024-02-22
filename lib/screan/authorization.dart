@@ -16,19 +16,27 @@ class Authorization extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          height: 300,
+          height: 400,
           width: 450,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              MyTextField('Full name'),
+              MyTextField('First name'),
+              MyTextField('Last name'),
+              MyTextField('Patronymic'),
               MyTextField('Phone'),
-              
+              MyTextField('Data of birthday'),
+              Row(children: [
+                Text('Male'),
+                SwitchField(),
+                Text('Female'),
+                SwitchField(),
+              ],),
               Container(
                   padding: EdgeInsets.all(10),
                 child: FloatingActionButton.extended(onPressed: (){
                   Navigator.pop(context);},
-                  label: Text("Login"),
+                  label: Text("Save"),
                 ),
               ),
             ],

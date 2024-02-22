@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class MyTextField extends StatelessWidget {
   String fildTitle = '';
+  int countOf = 10;
 
   MyTextField(String myTextField_Title)
   {
@@ -42,7 +43,7 @@ class _SwitchFieldState extends State<SwitchField> {
     return Switch(
       // This bool value toggles the switch.
       value: light,
-      activeColor: Colors.red,
+      activeColor: Color.fromARGB(255, 102, 73, 143),
       onChanged: (bool value) {
         // This is called when the user toggles the switch.
         setState(() {

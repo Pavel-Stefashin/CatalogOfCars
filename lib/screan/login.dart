@@ -19,7 +19,7 @@ class Login extends StatelessWidget {
             width: 450, 
             child: Column(
               children: [
-                MyTextField('Full name'), 
+                MyTextField('Phone'),
                 MyTextField('Password'), 
                 Container(
                   padding: EdgeInsets.all(10),
