@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:laba2/screan/productScr.dart';
+
 
 class MyTextField extends StatelessWidget {
   String fildTitle = '';
-  int countOf = 10;
 
   MyTextField(String myTextField_Title)
   {
@@ -51,5 +52,27 @@ class _SwitchFieldState extends State<SwitchField> {
         });
       },
     );
+  }
+}
+
+class Product{
+  String Name;
+  String Photo;
+  String Description;
+  Product(this.Name, this.Photo, this.Description);
+}
+
+class ProductButton extends StatelessWidget {
+  String Name;
+  String Photo;
+  String Description;
+
+  ProductButton(this.Name, this.Photo, this.Description);
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(onPressed: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context) => ProdactCard(this.Name, this.Photo, this.Description)));},
+          child: Image.network(Photo));
   }
 }

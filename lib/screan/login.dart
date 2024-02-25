@@ -15,8 +15,8 @@ class Login extends StatelessWidget {
       ),
       body: Center(
           child: Container(
-            height: 300, 
-            width: 450, 
+            width: MediaQuery.of(context).size.width * 0.6,
+            height: MediaQuery.of(context).size.height * 0.6,
             child: Column(
               children: [
                 MyTextField('Phone'),
@@ -26,7 +26,7 @@ class Login extends StatelessWidget {
                     child: Column(children: <Widget>[
                       FloatingActionButton.extended(onPressed: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context) => Catalog()));},
-                          label: Text("Login")), 
+                          label: Text("Sing in")),
                       TextButton(onPressed: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context) => Authorization()));
                         }, child: Text('Authorization'))

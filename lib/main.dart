@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:laba2/screan/catalog.dart';
 import 'package:laba2/screan/login.dart';
-
-import 'screan/authorization.dart';
+import 'package:laba2/screan/authorization.dart';
 
 
 
