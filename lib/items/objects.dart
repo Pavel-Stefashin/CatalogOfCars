@@ -59,7 +59,8 @@ class Product{
   String Name;
   String Photo;
   String Description;
-  Product(this.Name, this.Photo, this.Description);
+  String Price;
+  Product(this.Name, this.Photo, this.Description, this.Price);
 }
 
 class ProductButton extends StatelessWidget {

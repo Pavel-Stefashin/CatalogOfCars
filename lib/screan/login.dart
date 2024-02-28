@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:laba2/items/objects.dart';
+import 'package:laba2/screan/Catalogs/cars.dart';
 import 'package:laba2/screan/authorization.dart';
-import 'package:laba2/screan/catalog.dart';
+import 'package:laba2/screan/Catalogs/products.dart';
 
 class Login extends StatelessWidget {
   @override
@@ -27,6 +28,10 @@ class Login extends StatelessWidget {
                       FloatingActionButton.extended(onPressed: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context) => Catalog()));},
                           label: Text("Sing in")),
+                      Container(padding: EdgeInsets.only(top: 8, bottom: 8),
+                        child: FloatingActionButton.extended(onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => scrCars()));},
+                          label: Text("Cars")),),
                       TextButton(onPressed: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context) => Authorization()));
                         }, child: Text('Authorization'))
