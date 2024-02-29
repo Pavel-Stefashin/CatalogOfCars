@@ -9,7 +9,7 @@ class Authorization extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Center(
-          child: Text('Make an account',
+          child: Text('Давайте создадим аккаунт',
               style: TextStyle(fontSize: 40)
           )
       )
@@ -21,22 +21,22 @@ class Authorization extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              MyTextField('First name'),
-              MyTextField('Last name'),
-              MyTextField('Patronymic'),
-              MyTextField('Phone'),
-              MyTextField('Data of birthday'),
+              MyTextField('Фамилия'),
+              MyTextField('Имя'),
+              MyTextField('Отчество'),
+              MyTextField('Телефон'),
+              MyTextField('Дата рождения'),
               Row(children: [
-                Text('Male'),
+                Text('Мужчина'),
                 SwitchField(),
-                Text('Female'),
+                Text('Женщина'),
                 SwitchField(),
               ],),
               Container(
                   padding: EdgeInsets.all(10),
                 child: FloatingActionButton.extended(onPressed: (){
                   Navigator.pop(context);},
-                  label: Text("Save"),
+                  label: Text("Сохранить"),
                 ),
               ),
             ],

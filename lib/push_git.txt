@@ -1,0 +1,1 @@
+get remote set-url origin https://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@github.com/Pavel-Stefashin/Catalg

@@ -5,8 +5,8 @@ class ProdactCard extends StatelessWidget {
     String Name;
     String Photo;
     String Description;
-
-  ProdactCard(this.Name, this.Photo, this.Description);
+    String Price;
+  ProdactCard(this.Name, this.Photo, this.Description, this.Price);
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +28,9 @@ class ProdactCard extends StatelessWidget {
           Text("Описание",
           style: TextStyle(fontSize: 20)),
           Text(Description),
+          Text("Цена",
+              style: TextStyle(fontSize: 20)),
+          Text(Price as String),
         ],),
       ])
     ),

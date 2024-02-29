@@ -9,7 +9,7 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Center(
-        child: Text('Do you have an account?',
+        child: Text('У вас есть аккаунт?',
         style: TextStyle(fontSize: 40)
         )
       )
@@ -20,21 +20,21 @@ class Login extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.6,
             child: Column(
               children: [
-                MyTextField('Phone'),
-                MyTextField('Password'), 
+                MyTextField('Телефон'),
+                MyTextField('Пароль'),
                 Container(
                   padding: EdgeInsets.all(10),
                     child: Column(children: <Widget>[
-                      FloatingActionButton.extended(onPressed: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => Catalog()));},
-                          label: Text("Sing in")),
-                      Container(padding: EdgeInsets.only(top: 8, bottom: 8),
-                        child: FloatingActionButton.extended(onPressed: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => scrCars()));},
-                          label: Text("Cars")),),
+                      // FloatingActionButton.extended(onPressed: (){
+                      //   Navigator.push(context, MaterialPageRoute(builder: (context) => Catalog()));},
+                      //     label: Text("Войти")),
+                       Container(padding: EdgeInsets.only(top: 8, bottom: 8),
+                         child: FloatingActionButton.extended(onPressed: (){
+                         Navigator.push(context, MaterialPageRoute(builder: (context) => scrCars()));},
+                           label: Text("Каталог машин")),),
                       TextButton(onPressed: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context) => Authorization()));
-                        }, child: Text('Authorization'))
+                        }, child: Text('Зарегистрироваться'))
                     ])
                 ),
               ],

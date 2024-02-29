@@ -67,13 +67,14 @@ class ProductButton extends StatelessWidget {
   String Name;
   String Photo;
   String Description;
+  String Price;
 
-  ProductButton(this.Name, this.Photo, this.Description);
+  ProductButton(this.Name, this.Photo, this.Description, this.Price);
 
   @override
   Widget build(BuildContext context) {
     return TextButton(onPressed: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => ProdactCard(this.Name, this.Photo, this.Description)));},
+        Navigator.push(context, MaterialPageRoute(builder: (context) => ProdactCard(this.Name, this.Photo, this.Description, this.Price)));},
           child: Image.network(Photo));
   }
 }
