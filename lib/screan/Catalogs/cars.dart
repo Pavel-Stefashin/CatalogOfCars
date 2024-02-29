@@ -47,7 +47,7 @@ class scrCars extends StatelessWidget {
           itemBuilder: (BuildContext context, int index){
             return Container(
                 child: Column(children: <Widget>[
-                Image.network(Products[index].Photo),
+                  CarsButton(Products[index].Name, Products[index].Photo, Products[index].Description, Products[index].Price),
                   Text(Products[index].Name, style: TextStyle(fontSize: 30, color: Colors.black),),
                   Text("Цена: " + Products[index].Price as String, style: TextStyle(fontSize: 20, color: Colors.black),),
                 ])

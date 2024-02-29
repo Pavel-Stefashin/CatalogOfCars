@@ -78,3 +78,19 @@ class ProductButton extends StatelessWidget {
           child: Image.network(Photo));
   }
 }
+
+class CarsButton extends StatelessWidget {
+  String Name;
+  String Photo;
+  String Description;
+  String Price;
+
+  CarsButton(this.Name, this.Photo, this.Description, this.Price);
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(onPressed: (){
+      Navigator.push(context, MaterialPageRoute(builder: (context) => CarsCard(this.Name, this.Photo, this.Description, this.Price)));},
+        child: Image.network(Photo));
+  }
+}
