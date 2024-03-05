@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:laba2/screan/productScr.dart';
+import '../screan/Catalogs/cars.dart';
+
+
 
 
 class MyTextField extends StatelessWidget {
@@ -79,18 +82,56 @@ class ProductButton extends StatelessWidget {
   }
 }
 
+class Car{
+  String Name;
+  String Photo;
+  String Description;
+  String Price;
+  String PackageName;
+  String BodyType;
+  String TransmissionType;
+  String MaxSpeed;
+  String NumberOfSeats;
+  String EngineDisplacement;
+
+  Car(this.Name, this.Photo, this.Description, this.Price, this.PackageName,
+      this.BodyType, this.TransmissionType, this.MaxSpeed,
+      this.NumberOfSeats, this.EngineDisplacement);
+}
+
 class CarsButton extends StatelessWidget {
   String Name;
   String Photo;
   String Description;
   String Price;
-
-  CarsButton(this.Name, this.Photo, this.Description, this.Price);
+  String PackageName;
+  String BodyType;
+  String TransmissionType;
+  String MaxSpeed;
+  String NumberOfSeats;
+  String EngineDisplacement;
+  CarsButton(this.Name, this.Photo, this.Description, this.Price, this.PackageName,
+  this.BodyType, this.TransmissionType, this.MaxSpeed,
+  this.NumberOfSeats, this.EngineDisplacement);
 
   @override
   Widget build(BuildContext context) {
     return TextButton(onPressed: (){
-      Navigator.push(context, MaterialPageRoute(builder: (context) => CarsCard(this.Name, this.Photo, this.Description, this.Price)));},
+      Navigator.push(context, MaterialPageRoute(builder: (context) =>
+          CarsCard(this.Name, this.Photo, this.Description, this.Price,
+                  this.PackageName, this.BodyType, this.TransmissionType,
+                  this.MaxSpeed, this.NumberOfSeats, this.EngineDisplacement)));},
         child: Image.network(Photo));
+  }
+}
+
+class Carousel extends StatelessWidget {
+  const Carousel({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Carousel(),
+    );
   }
 }
