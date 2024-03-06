@@ -12,7 +12,7 @@ class scrCars extends StatelessWidget {
         "ЛАДА GRANTA СЕДАН",
         "https://static.lada.ru/images/v6/cars/configurator/granta/sedan.webp",
         "",
-        "от 699 900 ₽",
+        "от 699 900 ",
         "	1.6 MT Classic 5 мест",
         "Универсал",
         "МКПП 5",
@@ -23,7 +23,7 @@ class scrCars extends StatelessWidget {
         "NIVA TRAVEL",
         "https://static.lada.ru/images/v6/cars/configurator/niva-travel/travel.webp",
         "",
-        "от 1 198 900 ₽",
+        "от 1 198 900 ",
         "	1.6 MT Classic 5 мест",
         "Универсал",
         "МКПП 5",
@@ -34,7 +34,7 @@ class scrCars extends StatelessWidget {
         "VESTA СЕДАН",
         "https://static.lada.ru/images/v6/cars/configurator/vesta_new/sedan.webp",
         "Текст",
-        "от 1 239 900 ₽",
+        "от 1 239 900 ",
         "	1.6 MT Classic 5 мест",
         "Универсал",
         "МКПП 5",
@@ -45,7 +45,7 @@ class scrCars extends StatelessWidget {
         "NIVA LEGEND 3 ДВ.",
         "https://static.lada.ru/images/v6/cars/configurator/niva-legend/3dv.webp",
         "",
-        "от 829 900 ₽",
+        "от 829 900 ",
         "	1.6 MT Classic 5 мест",
         "Универсал",
         "МКПП 5",
@@ -56,7 +56,7 @@ class scrCars extends StatelessWidget {
         "VESTA SPORTLINE",
         "https://static.lada.ru/images/v6/cars/configurator/granta/drive-active.webp",
         "",
-        "от 2 175 900 ₽",
+        "от 2 175 900 ",
         "	1.6 MT Classic 5 мест",
         "Универсал",
         "МКПП 5",
@@ -67,7 +67,7 @@ class scrCars extends StatelessWidget {
         "LARGUS CROSS",
         "https://static.lada.ru/images/v6/cars/configurator/new-largus/universal.webp",
         "LADA Largus Cross взял все самое лучшее сразу от трех типов автомобиля: универсала, микроавтобуса и кроссовера. Вместительный салон, отличное оснащение, удобная высокая посадка — то, что нужно для семейных путешествий. Широкий спектр возможностей автомобиля выражен и в оригинальном стиле, который сочетает мощь и динамику. LADA Largus Cross оснащается 16-клапанным двигателем, адаптированным для работы на бензине АИ-92. Это современный, надежный и экономичный мотор, который обеспечивает хорошую динамику и комфорт движения. Опрятный и ухоженный автомобиль, в котором всегда уверен и которым приятно пользоваться. Для того, чтобы ваша LADA была именно такой, мы уже включили в состав аксессуары: ",
-        "от 2 175 900 ₽",
+        "от 2 175 900 ",
         "	1.6 MT Classic 5 мест",
         "Универсал",
         "МКПП 5",
@@ -78,7 +78,7 @@ class scrCars extends StatelessWidget {
         "GRANTA ФУРГОН",
         "https://static.lada.ru/images/v6/cars/configurator/commercial/granta_lcv_furgon.webp",
         "",
-        "от 1 267 000 ₽",
+        "от 1 267 000 ",
         "	1.6 MT Classic 5 мест",
         "Универсал",
         "МКПП 5",
@@ -90,15 +90,15 @@ class scrCars extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+        color: Colors.white,
         width: MediaQuery.of(context).size.width * 0.8,
         height: MediaQuery.of(context).size.height * 0.8,
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 500,
+              maxCrossAxisExtent: 200,
               childAspectRatio: 3 / 2,
-              crossAxisSpacing: 20,
-              mainAxisSpacing: 20),
-          padding: const EdgeInsets.all(20),
+              crossAxisSpacing: 5,
+              mainAxisSpacing: 8),
           itemCount: Cars.length,
           itemBuilder: (BuildContext context, int index) {
             return Container(
@@ -116,11 +116,13 @@ class scrCars extends StatelessWidget {
                   Cars[index].EngineDisplacement),
               Text(
                 Cars[index].Name,
-                style: TextStyle(fontSize: 30, color: Colors.black),
+                style: TextStyle(fontSize: 10, color: Colors.black),
+                  softWrap: true,
               ),
               Text(
                 "Цена: " + Cars[index].Price as String,
-                style: TextStyle(fontSize: 20, color: Colors.black),
+                style: TextStyle(fontSize: 10, color: Colors.black),
+                  softWrap: true,
               ),
             ]));
           },
@@ -171,11 +173,11 @@ class CarsCard extends StatelessWidget {
                   Container(
                     color: Colors.pink,
                     width: MediaQuery.of(context).size.width * 0.8,
-                    height: MediaQuery.of(context).size.height * 0.8,
+                    height: MediaQuery.of(context).size.height * 0.3,
                     child: CarouselSlider.builder(
-                        itemCount: 2,
+                        itemCount: 1,
                         itemBuilder: (BuildContext context, int index, int pageViewIndex) =>
-                    Container(child: Image.network("")),
+                    Container(child: Image.network(Photo)),
                       options: CarouselOptions(height: MediaQuery.of(context).size.height * 0.8,),
                     )
               ),
@@ -191,9 +193,10 @@ class CarsCard extends StatelessWidget {
               children: [
               Text(
               this.Description,
-              style: TextStyle(
-              fontSize: 10,
-              overflow: TextOverflow.ellipsis),
+                style: TextStyle(
+                    fontSize: 10,
+                    overflow: TextOverflow.ellipsis),
+                softWrap: true,
               ),
               ]
                             ),
