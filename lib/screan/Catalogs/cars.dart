@@ -117,12 +117,12 @@ class scrCars extends StatelessWidget {
               Text(
                 Cars[index].Name,
                 style: TextStyle(fontSize: 10, color: Colors.black),
-                  softWrap: true,
+                softWrap: true,
               ),
               Text(
                 "Цена: " + Cars[index].Price as String,
                 style: TextStyle(fontSize: 10, color: Colors.black),
-                  softWrap: true,
+                softWrap: true,
               ),
             ]));
           },
@@ -171,46 +171,57 @@ class CarsCard extends StatelessWidget {
               child: ListView(
                 children: [
                   Container(
+                      color: Colors.pink,
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      height: MediaQuery.of(context).size.height * 0.3,
+                      child: CarouselSlider.builder(
+                        itemCount: 1,
+                        itemBuilder: (BuildContext context, int index,
+                                int pageViewIndex) =>
+                            Container(child: Image.network(Photo)),
+                        options: CarouselOptions(
+                          height: MediaQuery.of(context).size.height * 0.8,
+                        ),
+                      )),
+                  Container(
+                    margin: EdgeInsets.only(top: 8),
                     color: Colors.pink,
                     width: MediaQuery.of(context).size.width * 0.8,
-                    height: MediaQuery.of(context).size.height * 0.3,
-                    child: CarouselSlider.builder(
-                        itemCount: 1,
-                        itemBuilder: (BuildContext context, int index, int pageViewIndex) =>
-                    Container(child: Image.network(Photo)),
-                      options: CarouselOptions(height: MediaQuery.of(context).size.height * 0.8,),
-                    )
-              ),
-              Container(
-              margin: EdgeInsets.only(top: 8),
-              color: Colors.pink,
-              width: MediaQuery.of(context).size.width * 0.8,
-              height: MediaQuery.of(context).size.height * 0.3,
-              child: Column(
-              children: [
-              Expanded(
-              child: ListView(
-              children: [
-              Text(
-              this.Description,
-                style: TextStyle(
-                    fontSize: 10,
-                    overflow: TextOverflow.ellipsis),
-                softWrap: true,
-              ),
-              ]
-                            ),
-                            flex: 4),
-                        Expanded(
-                            child: Text(
-                              "Цена: " + this.Price,
-                              style: TextStyle(
-                                fontSize: 30,
-                              ),
-                            ),
-                            flex: 1),
-                      ],
+                    height: MediaQuery.of(context).size.height * 0.05,
+                    child: Text(
+                      "Цена: " + this.Price,
+                      style: TextStyle(
+                        fontSize: 30,
+                      ),
                     ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 24),
+                    color: Colors.pink,
+                    width: MediaQuery.of(context).size.width * 0.8,
+                    height: MediaQuery.of(context).size.height * 0.05,
+                    child: Text(
+                      "Описание: ",
+                      style: TextStyle(
+                        fontSize: 30,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 8),
+                    color: Colors.pink,
+                    width: MediaQuery.of(context).size.width * 0.8,
+                    height: MediaQuery.of(context).size.height * 0.2,
+                    child: ListView(children: [
+                      Expanded(
+                        child: Text(
+                          this.Description,
+                          style: TextStyle(
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ]),
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 8),
@@ -220,46 +231,36 @@ class CarsCard extends StatelessWidget {
                     child: Column(
                       children: [
                         Expanded(
-                            flex: 1,
-                            child: ListView(
-                              children: [
-                                Row(children: [
-                                  Column(children: [
+                          child: ListView(
+                            children: [
+                              Table(
+                                children: [
+                                  TableRow(children: [
                                     Text(
                                       "Название комплектации: ",
                                       style: TextStyle(
                                         fontSize: 20,
                                       ),
                                     ),
+                                    Text(this.PackageName,
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                        )),
+                                  ]),
+                                  TableRow(children: [
                                     Text(
                                       "Тип кузова: ",
                                       style: TextStyle(
                                         fontSize: 20,
                                       ),
                                     ),
-                                    Text("Тип трансмиссии ",
-                                        style: TextStyle(
-                                          fontSize: 20,
-                                        )),
-                                    Text("Максимальная скорость, км/ч: ",
-                                        style: TextStyle(
-                                          fontSize: 20,
-                                        )),
-                                    Text("Число мест: ",
-                                        style: TextStyle(
-                                          fontSize: 20,
-                                        )),
-                                    Text("Объем двигателя: ",
+                                    Text(this.BodyType,
                                         style: TextStyle(
                                           fontSize: 20,
                                         )),
                                   ]),
-                                  Column(children: [
-                                    Text(this.PackageName,
-                                        style: TextStyle(
-                                          fontSize: 20,
-                                        )),
-                                    Text(this.BodyType,
+                                  TableRow(children: [
+                                    Text("Тип трансмиссии ",
                                         style: TextStyle(
                                           fontSize: 20,
                                         )),
@@ -267,11 +268,29 @@ class CarsCard extends StatelessWidget {
                                         style: TextStyle(
                                           fontSize: 20,
                                         )),
+                                  ]),
+                                  TableRow(children: [
+                                    Text("Максимальная скорость, км/ч: ",
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                        )),
                                     Text(this.MaxSpeed,
                                         style: TextStyle(
                                           fontSize: 20,
                                         )),
+                                  ]),
+                                  TableRow(children: [
+                                    Text("Число мест: ",
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                        )),
                                     Text(this.NumberOfSeats,
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                        )),
+                                  ]),
+                                  TableRow(children: [
+                                    Text("Объем двигателя: ",
                                         style: TextStyle(
                                           fontSize: 20,
                                         )),
@@ -280,11 +299,19 @@ class CarsCard extends StatelessWidget {
                                           fontSize: 20,
                                         )),
                                   ]),
-                                ]),
-                              ],
-                            )),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
                       ],
                     ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 8),
+                    color: Colors.pink,
+                    width: MediaQuery.of(context).size.width * 0.8,
+                    height: MediaQuery.of(context).size.height * 0.3,
                   ),
                 ],
               ),
