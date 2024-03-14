@@ -70,7 +70,12 @@ class scrCars extends StatelessWidget {
         ""),
     Car(
         "LARGUS CROSS",
-        ["https://static.lada.ru/images/v6/cars/configurator/new-largus/universal.webp"],
+        ["https://static.lada.ru/images/v6/cars/configurator/new-largus/universal.webp",
+          "https://s2.auto.drom.ru/photo/TaWBqdNfymwauRuEQJb-Ajb74CcaXp3issR7-eWzffDjhxfrHYCDBpGDG2VibVClcLysj0GWvOpUnEnBLnikF9ySfdDzTPcT.jpg",
+        "https://s2.auto.drom.ru/photo/oVttje48ke4bf2BfEX8gPd15IynmiXIvOlrf2T3-ORm9erkO5wwE_Rre4Rsb23iEWPq_ov-WQtORZBQgaoFA43084IdqE-vT.jpg",
+        "https://s2.auto.drom.ru/photo/SPHYvQYcxN6xSubRbCefWNVqaOiqtWJ3uMa3FbwVnsA76nU83cjm86wWoQX501CrdLut1eNtuai0R4kMYKl92S51WDQ3Gheq.jpg",
+        "https://s2.auto.drom.ru/photo/eTZLfOsgFj70Qkc5402YCLbz45cPu-_xzkRbSSWR8MY_0pWJGOrLxx75Hp67h0XomyN7QhG7FhGMkqgDm-2Twoe_3gL1OqyY.jpg",
+        "https://s2.auto.drom.ru/photo/O4Sr0B_efKgdIyhseDAy_i7gPEZ0kVFjk21g20NxxkixeiSKB4z_ah4KROg-bHjKhFvSvY8asJhP3IERVdXJL8rPmj6QpEsU.jpg"],
         "LADA Largus Cross взял все самое лучшее сразу от трех типов автомобиля: универсала, микроавтобуса и кроссовера. Вместительный салон, отличное оснащение, удобная высокая посадка — то, что нужно для семейных путешествий. Широкий спектр возможностей автомобиля выражен и в оригинальном стиле, который сочетает мощь и динамику. LADA Largus Cross оснащается 16-клапанным двигателем, адаптированным для работы на бензине АИ-92. Это современный, надежный и экономичный мотор, который обеспечивает хорошую динамику и комфорт движения. Опрятный и ухоженный автомобиль, в котором всегда уверен и которым приятно пользоваться. Для того, чтобы ваша LADA была именно такой, мы уже включили в состав аксессуары: ",
         "от 2 175 900 ",
         "	1.6 MT Classic 5 мест",
