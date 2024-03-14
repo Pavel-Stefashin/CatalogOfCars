@@ -84,7 +84,7 @@ class ProductButton extends StatelessWidget {
 
 class Car{
   String Name;
-  String Photo;
+  List<String> Photo;
   String Description;
   String Price;
   String PackageName;
@@ -93,15 +93,17 @@ class Car{
   String MaxSpeed;
   String NumberOfSeats;
   String EngineDisplacement;
+  String Url;
+
 
   Car(this.Name, this.Photo, this.Description, this.Price, this.PackageName,
       this.BodyType, this.TransmissionType, this.MaxSpeed,
-      this.NumberOfSeats, this.EngineDisplacement);
+      this.NumberOfSeats, this.EngineDisplacement, this.Url);
 }
 
 class CarsButton extends StatelessWidget {
   String Name;
-  String Photo;
+  List<String>  Photo;
   String Description;
   String Price;
   String PackageName;
@@ -110,9 +112,10 @@ class CarsButton extends StatelessWidget {
   String MaxSpeed;
   String NumberOfSeats;
   String EngineDisplacement;
+  String Url;
   CarsButton(this.Name, this.Photo, this.Description, this.Price, this.PackageName,
   this.BodyType, this.TransmissionType, this.MaxSpeed,
-  this.NumberOfSeats, this.EngineDisplacement);
+  this.NumberOfSeats, this.EngineDisplacement, this.Url);
 
   @override
   Widget build(BuildContext context) {
@@ -120,8 +123,8 @@ class CarsButton extends StatelessWidget {
       Navigator.push(context, MaterialPageRoute(builder: (context) =>
           CarsCard(this.Name, this.Photo, this.Description, this.Price,
                   this.PackageName, this.BodyType, this.TransmissionType,
-                  this.MaxSpeed, this.NumberOfSeats, this.EngineDisplacement)));},
-        child: Image.network(Photo));
+                  this.MaxSpeed, this.NumberOfSeats, this.EngineDisplacement, this.Url)));},
+        child: Image.network(Photo[0]));
   }
 }
 
