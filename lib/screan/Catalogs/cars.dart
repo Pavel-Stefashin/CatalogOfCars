@@ -53,16 +53,23 @@ class scrCars extends StatelessWidget {
     Car(
         "NIVA LEGEND 3 ДВ.",
         [
-          "https://static.lada.ru/images/v6/cars/configurator/niva-legend/3dv.webp"
+          "https://static.lada.ru/images/v6/cars/configurator/niva-legend/3dv.webp",
+          "https://s2.auto.drom.ru/photo/WuRH3ZWcjbA2wTOB7EvOGG8p_xUA8ShbOtifgMbTaWthWWDMDFQEGf6fOYB9HaU_od6r4_UuB8KpF9If5Ro3OclTpRAecEoD.jpg",
+          "https://s2.auto.drom.ru/photo/kjrdYIs_qF6Je7NR1h9r48EzkbZQfIpKsR4Q-w8obiPDqTPSO3CEXY-yCCsvwc2eczIH4YQFoIhHfbv1upo9NasuqFgmSIGN.jpg",
+          "https://s2.auto.drom.ru/photo/nzPkJXzRluhZ56osZ1E6lFO3lWPIBkSJkD3QcweZplHuTUxZv3Rr701DMg7g-5JZZ30gQK2BZvhzwoGj41S8L29AKk1XSGAz.jpg",
+          "https://s2.auto.drom.ru/photo/XSz2GnjuEbgI9v5Y9kIiU4kYnku4QcALAFk1nKF6aKV9JRmCA4yN1Ad_QnO4pbUruaIVA8GVntd_B4LYz5NbhZVkg4eGBMmY.jpg",
+          "https://s2.auto.drom.ru/photo/IC8X0Bs8MYyA0Bj7FqECH6fLC277e4vbYQqqg7Ad3LDG3qMly7yZabAiVO8jcomhjA00AZJ9xRTgX7rwk-bGitX5s9YCy4gF.jpg",
+          "https://s2.auto.drom.ru/photo/RCW0QFTCHZGScc_ixqQhY_6b5Zrx8PLuorfqVDGuuq--IJZIQ1vwsLTnbMh9Z1hobELUyVXkvAX1pagfHEou3IsI6rtArWVz.jpg",
+          "https://s2.auto.drom.ru/photo/hPjt643q2yjRiKFg5iNndD1_hbslisS2kr2lmc5UqZI3b7MSJ0CXIYwjWmuxzLPl13gc0mm6m93k68KPyuHeHlRtWvS1rnP9.jpg"
         ],
-        "",
+        "LADA Niva Legend — автомобиль со всемирно известным дизайном, в котором продумана каждая деталь. Короткие свесы улучшают проходимость на пересечённой местности и позволяют безопасно парковаться вплотную к бордюрам. Компактный кузов — это удачное решение и для города, и для леса. А скругленные линии капота, дверей и колесных арок — классическое решение, актуальное всегда и везде.",
         "от 829 900 ",
-        "	1.6 MT Classic 5 мест",
-        "Универсал",
+        "1.7 MT Urban",
+        "SUV",
         "МКПП 5",
-        "160",
-        "5",
-        "1596",
+        "142",
+        "4",
+        "1690",
         ""),
     Car(
         "VESTA SPORTLINE",
