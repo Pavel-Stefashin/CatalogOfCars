@@ -10,7 +10,9 @@ class scrCars extends StatelessWidget {
   List<Car> Cars = <Car>[
     Car(
         "ЛАДА GRANTA СЕДАН",
-        ["https://static.lada.ru/images/v6/cars/configurator/granta/sedan.webp"],
+        [
+          "https://static.lada.ru/images/v6/cars/configurator/granta/sedan.webp"
+        ],
         "",
         "от 699 900 ",
         "	1.6 MT Classic 5 мест",
@@ -22,7 +24,9 @@ class scrCars extends StatelessWidget {
         ""),
     Car(
         "NIVA TRAVEL",
-        ["https://static.lada.ru/images/v6/cars/configurator/niva-travel/travel.webp"],
+        [
+          "https://static.lada.ru/images/v6/cars/configurator/niva-travel/travel.webp"
+        ],
         "",
         "от 1 198 900 ",
         "	1.6 MT Classic 5 мест",
@@ -34,7 +38,9 @@ class scrCars extends StatelessWidget {
         ""),
     Car(
         "VESTA СЕДАН",
-        ["https://static.lada.ru/images/v6/cars/configurator/vesta_new/sedan.webp"],
+        [
+          "https://static.lada.ru/images/v6/cars/configurator/vesta_new/sedan.webp"
+        ],
         "Текст",
         "от 1 239 900 ",
         "	1.6 MT Classic 5 мест",
@@ -46,7 +52,9 @@ class scrCars extends StatelessWidget {
         ""),
     Car(
         "NIVA LEGEND 3 ДВ.",
-        ["https://static.lada.ru/images/v6/cars/configurator/niva-legend/3dv.webp"],
+        [
+          "https://static.lada.ru/images/v6/cars/configurator/niva-legend/3dv.webp"
+        ],
         "",
         "от 829 900 ",
         "	1.6 MT Classic 5 мест",
@@ -58,24 +66,34 @@ class scrCars extends StatelessWidget {
         ""),
     Car(
         "VESTA SPORTLINE",
-        ["https://static.lada.ru/images/v6/cars/configurator/granta/drive-active.webp"],
-        "",
+        [
+          "https://static.lada.ru/images/v6/cars/configurator/granta/drive-active.webp",
+          "https://s2.auto.drom.ru/photo/NkYsD_tiH7NVgkcxJmlHHw2YPxb7AYYFejETi1aJLYyHj_w7ysouZfjpr-xo6Hvw_TP9Z9yTfuxrM1t5Wcg571xeLbDZY_EQ.jpg",
+          "https://s2.auto.drom.ru/photo/VZ6Aot2OdlpENxrnGbzaLaVYZOVYAoG9RIgqTUq_AmtpeBbK-UUur91sYlPO5k_FUAeQXc73vKOOvhBiVG4kuor83YFDaVha.jpg",
+          "https://s2.auto.drom.ru/photo/SXPXoqejmRsWHvw3prvZRZsm83jcVe4uyG0NTujIr7EZy71WZvYFOCCy0qR3GXdc4JOk5aQwSADTgIZ8iUqnjttWqj5KS_Pn.jpg",
+          "https://s2.auto.drom.ru/photo/ogQgSTaYM3tKzNBHm_GGC3sy6fXWjZMLBjo8eoacYiMod0jIWYxzYSznvoaH5SVk5-k_B_dEbLH1GxHEr8pzj_pSEqhCNCYI.jpg",
+          "https://s2.auto.drom.ru/photo/Bk68nLGvmZ3YgYpvzltwRZX--3gH3r_JStPMtDZ14YrFz-_4bo7RzaYEac2lltZBR663q0ZERqxnmnhIP9O7ZSadY9WQxMgR.jpg",
+          "https://s2.auto.drom.ru/photo/vz1A_jh2UE5kLKdpo4sEGgaUXmDNhOoJwZKkIP1Xh8-Wt7moltPx8w7BQJ7l6-17Fic9FWHpbL36cw2Rx7WK7dsEaBSOnbh1.jpg"
+        ],
+        "Каждый маршрут становится гоночной трассой. Каждый водитель может быть самым быстрым. Силуэт — занижен, колея — расширена. Автомобиль со спортивным характером выделяется в потоке. Его слышно: выпуск настроен на свободное дыхание мотора. Под скорость создан и кузов: испытан в аэротрубе и оснащен тщательно проработанным обвесом.",
         "от 2 175 900 ",
-        "	1.6 MT Classic 5 мест",
-        "Универсал",
+        "	1.6 MT 2WD Sportline",
+        "Седан",
         "МКПП 5",
-        "160",
+        "190",
         "5",
         "1596",
         ""),
     Car(
         "LARGUS CROSS",
-        ["https://static.lada.ru/images/v6/cars/configurator/new-largus/universal.webp",
+        [
+          "https://static.lada.ru/images/v6/cars/configurator/new-largus/universal.webp",
           "https://s2.auto.drom.ru/photo/TaWBqdNfymwauRuEQJb-Ajb74CcaXp3issR7-eWzffDjhxfrHYCDBpGDG2VibVClcLysj0GWvOpUnEnBLnikF9ySfdDzTPcT.jpg",
-        "https://s2.auto.drom.ru/photo/oVttje48ke4bf2BfEX8gPd15IynmiXIvOlrf2T3-ORm9erkO5wwE_Rre4Rsb23iEWPq_ov-WQtORZBQgaoFA43084IdqE-vT.jpg",
-        "https://s2.auto.drom.ru/photo/SPHYvQYcxN6xSubRbCefWNVqaOiqtWJ3uMa3FbwVnsA76nU83cjm86wWoQX501CrdLut1eNtuai0R4kMYKl92S51WDQ3Gheq.jpg",
-        "https://s2.auto.drom.ru/photo/eTZLfOsgFj70Qkc5402YCLbz45cPu-_xzkRbSSWR8MY_0pWJGOrLxx75Hp67h0XomyN7QhG7FhGMkqgDm-2Twoe_3gL1OqyY.jpg",
-        "https://s2.auto.drom.ru/photo/O4Sr0B_efKgdIyhseDAy_i7gPEZ0kVFjk21g20NxxkixeiSKB4z_ah4KROg-bHjKhFvSvY8asJhP3IERVdXJL8rPmj6QpEsU.jpg"],
+          "https://s2.auto.drom.ru/photo/oVttje48ke4bf2BfEX8gPd15IynmiXIvOlrf2T3-ORm9erkO5wwE_Rre4Rsb23iEWPq_ov-WQtORZBQgaoFA43084IdqE-vT.jpg",
+          "https://s2.auto.drom.ru/photo/SPHYvQYcxN6xSubRbCefWNVqaOiqtWJ3uMa3FbwVnsA76nU83cjm86wWoQX501CrdLut1eNtuai0R4kMYKl92S51WDQ3Gheq.jpg",
+          "https://s2.auto.drom.ru/photo/eTZLfOsgFj70Qkc5402YCLbz45cPu-_xzkRbSSWR8MY_0pWJGOrLxx75Hp67h0XomyN7QhG7FhGMkqgDm-2Twoe_3gL1OqyY.jpg",
+          "https://s2.auto.drom.ru/photo/O4Sr0B_efKgdIyhseDAy_i7gPEZ0kVFjk21g20NxxkixeiSKB4z_ah4KROg-bHjKhFvSvY8asJhP3IERVdXJL8rPmj6QpEsU.jpg"
+        ],
         "LADA Largus Cross взял все самое лучшее сразу от трех типов автомобиля: универсала, микроавтобуса и кроссовера. Вместительный салон, отличное оснащение, удобная высокая посадка — то, что нужно для семейных путешествий. Широкий спектр возможностей автомобиля выражен и в оригинальном стиле, который сочетает мощь и динамику. LADA Largus Cross оснащается 16-клапанным двигателем, адаптированным для работы на бензине АИ-92. Это современный, надежный и экономичный мотор, который обеспечивает хорошую динамику и комфорт движения. Опрятный и ухоженный автомобиль, в котором всегда уверен и которым приятно пользоваться. Для того, чтобы ваша LADA была именно такой, мы уже включили в состав аксессуары: ",
         "от 2 175 900 ",
         "	1.6 MT Classic 5 мест",
@@ -87,16 +105,23 @@ class scrCars extends StatelessWidget {
         ""),
     Car(
         "GRANTA ФУРГОН",
-        ["https://static.lada.ru/images/v6/cars/configurator/commercial/granta_lcv_furgon.webp"],
-        "",
+        [
+          "https://static.lada.ru/images/v6/cars/configurator/commercial/granta_lcv_furgon.webp",
+          "https://s.auto.drom.ru/i24284/c/photos/fullsize/lada/granta/lada_granta_1153308.jpg",
+          "https://s.auto.drom.ru/i24284/c/photos/fullsize/lada/granta/lada_granta_1153307.jpg",
+          "https://s.auto.drom.ru/i24284/c/photos/fullsize/lada/granta/lada_granta_1153310.jpg",
+          "https://s.auto.drom.ru/i24284/c/photos/fullsize/lada/granta/lada_granta_1153309.jpg",
+          "https://s.auto.drom.ru/i24284/c/photos/fullsize/lada/granta/lada_granta_1153324.jpg"
+        ],
+        "LADA Granta с бортовой платформой – надежный коммерческий автомобиль с полурамной конструкцией кузова и задней рессорной подвеской. В зависимости от задач бизнеса, можно выбрать стандартную либо удлинённую версию. Дополнительную защиту груза можно обеспечить, заказав версию со стеклопластиковым кунгом.",
         "от 1 267 000 ",
-        "	1.6 MT Classic 5 мест",
-        "Универсал",
+        "	1.6 MT Classic фургон",
+        "Коммерческий фургон",
         "МКПП 5",
-        "160",
-        "5",
+        "158",
+        "2",
         "1596",
-    ""),
+        ""),
   ];
 
   @override
@@ -116,16 +141,16 @@ class scrCars extends StatelessWidget {
             return Container(
                 child: Column(children: <Widget>[
               CarsButton(
-                  Cars[index].Name,
-                  Cars[index].Photo,
-                  Cars[index].Description,
-                  Cars[index].Price,
-                  Cars[index].PackageName,
-                  Cars[index].BodyType,
-                  Cars[index].TransmissionType,
-                  Cars[index].MaxSpeed,
-                  Cars[index].NumberOfSeats,
-                  Cars[index].EngineDisplacement,
+                Cars[index].Name,
+                Cars[index].Photo,
+                Cars[index].Description,
+                Cars[index].Price,
+                Cars[index].PackageName,
+                Cars[index].BodyType,
+                Cars[index].TransmissionType,
+                Cars[index].MaxSpeed,
+                Cars[index].NumberOfSeats,
+                Cars[index].EngineDisplacement,
                 Cars[index].Url,
               ),
               Text(
@@ -168,8 +193,7 @@ class CarsCard extends StatelessWidget {
       this.MaxSpeed,
       this.NumberOfSeats,
       this.EngineDisplacement,
-      this.Url
-      );
+      this.Url);
 
   @override
   Widget build(BuildContext context) {
