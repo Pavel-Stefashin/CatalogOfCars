@@ -10,7 +10,7 @@ class scrCars extends StatelessWidget {
   List<Car> Cars = <Car>[
     Car(
         "ЛАДА GRANTA СЕДАН",
-        "https://static.lada.ru/images/v6/cars/configurator/granta/sedan.webp",
+        ["https://static.lada.ru/images/v6/cars/configurator/granta/sedan.webp"],
         "",
         "от 699 900 ",
         "	1.6 MT Classic 5 мест",
@@ -18,10 +18,11 @@ class scrCars extends StatelessWidget {
         "МКПП 5",
         "160",
         "5",
-        "1596"),
+        "1596",
+        ""),
     Car(
         "NIVA TRAVEL",
-        "https://static.lada.ru/images/v6/cars/configurator/niva-travel/travel.webp",
+        ["https://static.lada.ru/images/v6/cars/configurator/niva-travel/travel.webp"],
         "",
         "от 1 198 900 ",
         "	1.6 MT Classic 5 мест",
@@ -29,10 +30,11 @@ class scrCars extends StatelessWidget {
         "МКПП 5",
         "160",
         "5",
-        "1596"),
+        "1596",
+        ""),
     Car(
         "VESTA СЕДАН",
-        "https://static.lada.ru/images/v6/cars/configurator/vesta_new/sedan.webp",
+        ["https://static.lada.ru/images/v6/cars/configurator/vesta_new/sedan.webp"],
         "Текст",
         "от 1 239 900 ",
         "	1.6 MT Classic 5 мест",
@@ -40,10 +42,11 @@ class scrCars extends StatelessWidget {
         "МКПП 5",
         "160",
         "5",
-        "1596"),
+        "1596",
+        ""),
     Car(
         "NIVA LEGEND 3 ДВ.",
-        "https://static.lada.ru/images/v6/cars/configurator/niva-legend/3dv.webp",
+        ["https://static.lada.ru/images/v6/cars/configurator/niva-legend/3dv.webp"],
         "",
         "от 829 900 ",
         "	1.6 MT Classic 5 мест",
@@ -51,10 +54,11 @@ class scrCars extends StatelessWidget {
         "МКПП 5",
         "160",
         "5",
-        "1596"),
+        "1596",
+        ""),
     Car(
         "VESTA SPORTLINE",
-        "https://static.lada.ru/images/v6/cars/configurator/granta/drive-active.webp",
+        ["https://static.lada.ru/images/v6/cars/configurator/granta/drive-active.webp"],
         "",
         "от 2 175 900 ",
         "	1.6 MT Classic 5 мест",
@@ -62,10 +66,11 @@ class scrCars extends StatelessWidget {
         "МКПП 5",
         "160",
         "5",
-        "1596"),
+        "1596",
+        ""),
     Car(
         "LARGUS CROSS",
-        "https://static.lada.ru/images/v6/cars/configurator/new-largus/universal.webp",
+        ["https://static.lada.ru/images/v6/cars/configurator/new-largus/universal.webp"],
         "LADA Largus Cross взял все самое лучшее сразу от трех типов автомобиля: универсала, микроавтобуса и кроссовера. Вместительный салон, отличное оснащение, удобная высокая посадка — то, что нужно для семейных путешествий. Широкий спектр возможностей автомобиля выражен и в оригинальном стиле, который сочетает мощь и динамику. LADA Largus Cross оснащается 16-клапанным двигателем, адаптированным для работы на бензине АИ-92. Это современный, надежный и экономичный мотор, который обеспечивает хорошую динамику и комфорт движения. Опрятный и ухоженный автомобиль, в котором всегда уверен и которым приятно пользоваться. Для того, чтобы ваша LADA была именно такой, мы уже включили в состав аксессуары: ",
         "от 2 175 900 ",
         "	1.6 MT Classic 5 мест",
@@ -73,10 +78,11 @@ class scrCars extends StatelessWidget {
         "МКПП 5",
         "160",
         "5",
-        "1596"),
+        "1596",
+        ""),
     Car(
         "GRANTA ФУРГОН",
-        "https://static.lada.ru/images/v6/cars/configurator/commercial/granta_lcv_furgon.webp",
+        ["https://static.lada.ru/images/v6/cars/configurator/commercial/granta_lcv_furgon.webp"],
         "",
         "от 1 267 000 ",
         "	1.6 MT Classic 5 мест",
@@ -84,7 +90,8 @@ class scrCars extends StatelessWidget {
         "МКПП 5",
         "160",
         "5",
-        "1596"),
+        "1596",
+    ""),
   ];
 
   @override
@@ -113,7 +120,9 @@ class scrCars extends StatelessWidget {
                   Cars[index].TransmissionType,
                   Cars[index].MaxSpeed,
                   Cars[index].NumberOfSeats,
-                  Cars[index].EngineDisplacement),
+                  Cars[index].EngineDisplacement,
+                Cars[index].Url,
+              ),
               Text(
                 Cars[index].Name,
                 style: TextStyle(fontSize: 10, color: Colors.black),
@@ -132,7 +141,7 @@ class scrCars extends StatelessWidget {
 
 class CarsCard extends StatelessWidget {
   String Name;
-  String Photo;
+  List<String> Photo;
   String Description;
   String Price;
   String PackageName;
@@ -141,6 +150,8 @@ class CarsCard extends StatelessWidget {
   String MaxSpeed;
   String NumberOfSeats;
   String EngineDisplacement;
+  String Url;
+
   CarsCard(
       this.Name,
       this.Photo,
@@ -151,7 +162,9 @@ class CarsCard extends StatelessWidget {
       this.TransmissionType,
       this.MaxSpeed,
       this.NumberOfSeats,
-      this.EngineDisplacement);
+      this.EngineDisplacement,
+      this.Url
+      );
 
   @override
   Widget build(BuildContext context) {
@@ -171,21 +184,21 @@ class CarsCard extends StatelessWidget {
               child: ListView(
                 children: [
                   Container(
-                      color: Colors.pink,
+                      //color: Colors.pink,
                       width: MediaQuery.of(context).size.width * 0.8,
                       height: MediaQuery.of(context).size.height * 0.3,
                       child: CarouselSlider.builder(
-                        itemCount: 1,
+                        itemCount: Photo.length,
                         itemBuilder: (BuildContext context, int index,
                                 int pageViewIndex) =>
-                            Container(child: Image.network(Photo)),
+                            Container(child: Image.network(Photo[index])),
                         options: CarouselOptions(
                           height: MediaQuery.of(context).size.height * 0.8,
                         ),
                       )),
                   Container(
                     margin: EdgeInsets.only(top: 8),
-                    color: Colors.pink,
+                    //color: Colors.pink,
                     width: MediaQuery.of(context).size.width * 0.8,
                     height: MediaQuery.of(context).size.height * 0.05,
                     child: Text(
@@ -197,7 +210,7 @@ class CarsCard extends StatelessWidget {
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 24),
-                    color: Colors.pink,
+                    //color: Colors.pink,
                     width: MediaQuery.of(context).size.width * 0.8,
                     height: MediaQuery.of(context).size.height * 0.05,
                     child: Text(
@@ -208,8 +221,8 @@ class CarsCard extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 8),
-                    color: Colors.pink,
+                    margin: EdgeInsets.only(top: 8, bottom: 16),
+                    //color: Colors.pink,
                     width: MediaQuery.of(context).size.width * 0.8,
                     height: MediaQuery.of(context).size.height * 0.2,
                     child: ListView(children: [
@@ -225,7 +238,7 @@ class CarsCard extends StatelessWidget {
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 8),
-                    color: Colors.pink,
+                    //color: Colors.pink,
                     width: MediaQuery.of(context).size.width * 0.8,
                     height: MediaQuery.of(context).size.height * 0.3,
                     child: Column(
@@ -309,7 +322,7 @@ class CarsCard extends StatelessWidget {
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 8),
-                    color: Colors.pink,
+                    //color: Colors.pink,
                     width: MediaQuery.of(context).size.width * 0.8,
                     height: MediaQuery.of(context).size.height * 0.3,
                   ),
