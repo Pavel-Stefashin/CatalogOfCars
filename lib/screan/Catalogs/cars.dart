@@ -381,7 +381,8 @@ class CarsCard extends StatelessWidget {
                     //color: Colors.pink,
                     width: MediaQuery.of(context).size.width * 0.8,
                     height: MediaQuery.of(context).size.height * 0.3,
-                  ),
+                    child: Video(VideoLink: Url),
+                    ),
                 ],
               ),
             )
