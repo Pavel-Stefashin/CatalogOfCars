@@ -28,7 +28,7 @@ class scrCars extends StatelessWidget {
         "179",
         "5",
         "1596",
-        ""),
+        "https://youtu.be/W5LPcpIRLzs?si=q0CQazni4pa697eW"),
     Car(
         "NIVA TRAVEL",
         [
