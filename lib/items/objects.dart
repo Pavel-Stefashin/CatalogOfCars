@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:laba2/screan/productScr.dart';
+import '../screan/Catalogs/cars.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
+
 
 
 class MyTextField extends StatelessWidget {
@@ -76,5 +79,80 @@ class ProductButton extends StatelessWidget {
     return TextButton(onPressed: (){
         Navigator.push(context, MaterialPageRoute(builder: (context) => ProdactCard(this.Name, this.Photo, this.Description, this.Price)));},
           child: Image.network(Photo));
+  }
+}
+
+class Car{
+  String Name;
+  List<String> Photo;
+  String Description;
+  String Price;
+  String PackageName;
+  String BodyType;
+  String TransmissionType;
+  String MaxSpeed;
+  String NumberOfSeats;
+  String EngineDisplacement;
+  String Url;
+
+
+  Car(this.Name, this.Photo, this.Description, this.Price, this.PackageName,
+      this.BodyType, this.TransmissionType, this.MaxSpeed,
+      this.NumberOfSeats, this.EngineDisplacement, this.Url);
+}
+
+class CarsButton extends StatelessWidget {
+  String Name;
+  List<String>  Photo;
+  String Description;
+  String Price;
+  String PackageName;
+  String BodyType;
+  String TransmissionType;
+  String MaxSpeed;
+  String NumberOfSeats;
+  String EngineDisplacement;
+  String Url;
+  CarsButton(this.Name, this.Photo, this.Description, this.Price, this.PackageName,
+  this.BodyType, this.TransmissionType, this.MaxSpeed,
+  this.NumberOfSeats, this.EngineDisplacement, this.Url);
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(onPressed: (){
+      Navigator.push(context, MaterialPageRoute(builder: (context) =>
+          CarsCard(this.Name, this.Photo, this.Description, this.Price,
+                  this.PackageName, this.BodyType, this.TransmissionType,
+                  this.MaxSpeed, this.NumberOfSeats, this.EngineDisplacement, this.Url)));},
+        child: Image.network(Photo[0]));
+  }
+}
+
+class Carousel extends StatelessWidget {
+  const Carousel({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Carousel(),
+    );
+  }
+}
+
+
+class Video extends StatelessWidget {
+  final String VideoLink;
+
+  const Video({Key? key, required this.VideoLink}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final _controller = YoutubePlayerController();
+    _controller.loadVideoById(videoId: YoutubePlayerController.convertUrlToId(VideoLink).toString());
+
+    return YoutubePlayer(
+      controller: _controller,
+      aspectRatio: 16 / 9,
+    );
   }
 }

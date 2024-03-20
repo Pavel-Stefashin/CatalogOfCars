@@ -38,4 +38,3 @@ class ProdactCard extends StatelessWidget {
     );
   }
 }
-
