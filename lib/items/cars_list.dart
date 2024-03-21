@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
 import '../../items/car_class.dart';
 
 List<Car> Cars = <Car>[
   Car(
+      0,
       "ЛАДА GRANTA СЕДАН",
       [
         "https://static.lada.ru/images/v6/cars/configurator/granta/sedan.webp",
@@ -19,6 +19,7 @@ List<Car> Cars = <Car>[
       "1596",
       "https://youtu.be/EJB6SRAJqNg?si=ietZ8d8dzGPImhhi"),
   Car(
+      1,
       "NIVA TRAVEL",
       [
         "https://static.lada.ru/images/v6/cars/configurator/niva-travel/travel.webp",
@@ -35,6 +36,7 @@ List<Car> Cars = <Car>[
       "1690",
       "https://youtu.be/CLww5vuaTB8?si=AIEoPaytkicLF4B0"),
   Car(
+      2,
       "VESTA СЕДАН",
       [
         "https://static.lada.ru/images/v6/cars/configurator/vesta_new/sedan.webp",
@@ -51,6 +53,7 @@ List<Car> Cars = <Car>[
       "1596",
       "https://youtu.be/jg5RPqGE8z0?si=rYyxl21p4N0qcdsP"),
   Car(
+      3,
       "NIVA LEGEND 3 ДВ.",
       [
         "https://static.lada.ru/images/v6/cars/configurator/niva-legend/3dv.webp",
@@ -67,6 +70,7 @@ List<Car> Cars = <Car>[
       "1690",
       "https://youtu.be/9qVk5tH9nsM?si=sDq8D7kLe6uFsFLS"),
   Car(
+      4,
       "VESTA SPORTLINE",
       [
         "https://static.lada.ru/images/v6/cars/configurator/granta/drive-active.webp",
@@ -83,6 +87,7 @@ List<Car> Cars = <Car>[
       "1596",
       "https://youtu.be/YMrs_Oi927Y?si=SAl7T92VESqTJKZR"),
   Car(
+      5,
       "LARGUS CROSS",
       [
         "https://static.lada.ru/images/v6/cars/configurator/new-largus/universal.webp",
@@ -99,6 +104,7 @@ List<Car> Cars = <Car>[
       "1596",
       "https://youtu.be/sn8cOPiaD4o?si=-f95ZwaR0ByB037n"),
   Car(
+      6,
       "GRANTA ФУРГОН",
       [
         "https://static.lada.ru/images/v6/cars/configurator/commercial/granta_lcv_furgon.webp",

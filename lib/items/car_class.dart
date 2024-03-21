@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 
 class Car{
+  int Id;
   String Name;
   List<String> Photo;
   String Description;
@@ -13,8 +13,7 @@ class Car{
   String EngineDisplacement;
   String Url;
 
-
-  Car(this.Name, this.Photo, this.Description, this.Price, this.PackageName,
+  Car(this.Id, this.Name, this.Photo, this.Description, this.Price, this.PackageName,
       this.BodyType, this.TransmissionType, this.MaxSpeed,
       this.NumberOfSeats, this.EngineDisplacement, this.Url);
 }
