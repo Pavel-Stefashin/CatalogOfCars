@@ -9,35 +9,67 @@ class scrCars extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         color: Colors.white,
-        width: MediaQuery.of(context).size.width * 0.8,
-        height: MediaQuery.of(context).size.height * 0.8,
+        padding: EdgeInsets.all(20),
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 200,
-              childAspectRatio: 3 / 2,
+              maxCrossAxisExtent: 300,
+              childAspectRatio: 1 / 1,
               crossAxisSpacing: 5,
-              mainAxisSpacing: 8),
+              mainAxisSpacing: 30),
           itemCount: Cars.length,
           itemBuilder: (BuildContext context, int index) {
-            return Container(
+            return Expanded(
                 child: Column(children: <Widget>[
-                    TextButton( onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => CarsCard(index)));},
-                        child: Image.network(Cars[index].Photo[0])),
-              Expanded(child: Text(
+              TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => CarsCard(index)));
+                  },
+                  child: Image.network(Cars[index].Photo[0])),
+              Text(
                 Cars[index].Name,
                 style: TextStyle(fontSize: 10, color: Colors.black),
                 softWrap: true,
-              ),),
-                Expanded(child:Text(
+              ),
+              Text(
                 "Цена: " + Cars[index].Price as String,
                 style: TextStyle(fontSize: 10, color: Colors.black),
-                softWrap: true,),
+                softWrap: true,
+              ),
+              Align(
+                alignment: Alignment.centerRight,
+                    child: Container(
+                      width: 80,
+                  child: Row(
+                    children: [
+                      IconButton(
+                        icon: Icon(Icons.shopping_basket_outlined),
+                        iconSize: 15.0,
+                        color: Colors.blue,
+                        onPressed: () {
+                          // Делаем что-то при нажатии кнопки.
+                        },
+                        tooltip: 'Add to favorites',
+                        splashColor: Colors.redAccent,
+                      ),
+                      IconButton(
+                        icon: Icon(Icons.favorite),
+                        iconSize: 15.0,
+                        color: Colors.red,
+                        onPressed: () {
+                          // Делаем что-то при нажатии кнопки.
+                        },
+                        tooltip: 'Add to favorites',
+                        splashColor: Colors.redAccent,
+                      ),
+                    ],
+                  ),
                 ),
-            ])
-            );
+              ),
+            ]));
           },
         ));
   }
 }
-
