@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import '../../items/cars_list.dart';
 import '../cars_card.dart';
+import '../../screan//favorite.dart';
 
 class scrCars extends StatelessWidget {
   scrCars({Key? key}) : super(key: key);
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +18,7 @@ class scrCars extends StatelessWidget {
               maxCrossAxisExtent: 300,
               childAspectRatio: 1 / 1,
               crossAxisSpacing: 5,
-              mainAxisSpacing: 30),
+              mainAxisSpacing: 5),
           itemCount: Cars.length,
           itemBuilder: (BuildContext context, int index) {
             return Expanded(
@@ -40,8 +43,8 @@ class scrCars extends StatelessWidget {
               ),
               Align(
                 alignment: Alignment.centerRight,
-                    child: Container(
-                      width: 80,
+                child: Container(
+                  width: 80,
                   child: Row(
                     children: [
                       IconButton(
@@ -52,14 +55,14 @@ class scrCars extends StatelessWidget {
                           // Делаем что-то при нажатии кнопки.
                         },
                         tooltip: 'Add to favorites',
-                        splashColor: Colors.redAccent,
+                        splashColor: Colors.blueAccent,
                       ),
                       IconButton(
-                        icon: Icon(Icons.favorite),
+                        icon: Icon(Icons.favorite_border),
                         iconSize: 15.0,
                         color: Colors.red,
                         onPressed: () {
-                          // Делаем что-то при нажатии кнопки.
+
                         },
                         tooltip: 'Add to favorites',
                         splashColor: Colors.redAccent,
