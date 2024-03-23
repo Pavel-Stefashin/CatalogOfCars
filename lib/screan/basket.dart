@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:laba2/items/favorite_list.dart';
+import '../items/basket_button_st_full.dart';
 import '../items/basket_list.dart';
 import '../items/bottom_bar.dart';
-import '../items/cars_list.dart';
-import '../items/favorite_button_st_full.dart';
 import 'cars_card.dart';
 
-class FavoriteScr extends StatelessWidget {
+class BascketScr extends StatelessWidget {
 
-  FavoriteScr();
+  BascketScr();
 
   @override
   Widget build(BuildContext context) {
 
-    return Scaffold(appBar: AppBar(title: Text('Избранное', style: TextStyle(fontSize: 40,),),),
+    return Scaffold(appBar: AppBar(title: Text('Корзина', style: TextStyle(fontSize: 40,),),),
       body: Container(
           color: Colors.white,
           padding: EdgeInsets.all(20),
@@ -23,7 +21,7 @@ class FavoriteScr extends StatelessWidget {
                 childAspectRatio: 1 / 1,
                 crossAxisSpacing: 5,
                 mainAxisSpacing: 5),
-            itemCount: FavoriteList.length,
+            itemCount: BascketList.length,
             itemBuilder: (BuildContext context, int index) {
               return Expanded(
                   child: Column(children: <Widget>[
@@ -32,16 +30,16 @@ class FavoriteScr extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => CarsCard(FavoriteList[index].Id)));
+                                  builder: (context) => CarsCard(BascketList[index].Id)));
                         },
-                        child: Image.network(FavoriteList[index].Photo[0])),
+                        child: Image.network(BascketList[index].Photo[0])),
                     Text(
-                      FavoriteList[index].Name,
+                      BascketList[index].Name,
                       style: TextStyle(fontSize: 10, color: Colors.black),
                       softWrap: true,
                     ),
                     Text(
-                      "Цена: " + FavoriteList[index].Price as String,
+                      "Цена: " + BascketList[index].Price as String,
                       style: TextStyle(fontSize: 10, color: Colors.black),
                       softWrap: true,
                     ),
@@ -51,17 +49,7 @@ class FavoriteScr extends StatelessWidget {
                         width: 80,
                         child: Row(
                           children: [
-                            IconButton(
-                              icon: Icon(Icons.shopping_basket_outlined),
-                              iconSize: 15.0,
-                              color: Colors.blue,
-                              onPressed: () {
-                                BascketList.add(FavoriteList[index]);
-                              },
-                              tooltip: 'Добавить в карзину',
-                              splashColor: Colors.blueAccent,
-                            ),
-                            FavoriteButton(FavoriteList[index].Id, "Удалить из избранного"),
+                            BasketButton(BascketList[index].Id, true, "Удалить из корзины"),
                           ],
                         ),
                       ),
