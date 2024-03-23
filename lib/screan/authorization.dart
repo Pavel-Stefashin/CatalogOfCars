@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:laba2/items/objects.dart';
+import '../../items/my_text_fild.dart';
+import '../../items/switch_fild.dart';
 
 
 class Authorization extends StatelessWidget {
