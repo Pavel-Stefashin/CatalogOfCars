@@ -39,7 +39,7 @@ class BascketScr extends StatelessWidget {
                       softWrap: true,
                     ),
                     Text(
-                      "Цена: " + BascketList[index].Price as String,
+                      "Цена: от " + BascketList[index].Price.toString(),
                       style: TextStyle(fontSize: 10, color: Colors.black),
                       softWrap: true,
                     ),

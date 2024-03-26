@@ -44,7 +44,7 @@ class CarsCard extends StatelessWidget {
                       width: MediaQuery.of(context).size.width * 0.8,
                       height: MediaQuery.of(context).size.height * 0.05,
                       child: Text(
-                        "Цена: " + Cars[Id].Price,
+                        "Цена: от " + Cars[Id].Price.toString(),
                         style: TextStyle(
                           fontSize: 30,
                         ),

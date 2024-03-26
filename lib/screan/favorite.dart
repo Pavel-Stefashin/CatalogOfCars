@@ -41,7 +41,7 @@ class FavoriteScr extends StatelessWidget {
                       softWrap: true,
                     ),
                     Text(
-                      "Цена: " + FavoriteList[index].Price as String,
+                      "Цена: от " + FavoriteList[index].Price.toString(),
                       style: TextStyle(fontSize: 10, color: Colors.black),
                       softWrap: true,
                     ),

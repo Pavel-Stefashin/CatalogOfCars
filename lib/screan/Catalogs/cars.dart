@@ -7,6 +7,8 @@ import '../../items/cars_list.dart';
 import '../../items/favorite_button_st_full.dart';
 import '../cars_card.dart';
 import '../favorite.dart';
+import '../purchase.dart';
+import '../../items/purchased_list.dart';
 
 class scrCars extends StatelessWidget {
   scrCars({Key? key}) : super(key: key);
@@ -14,6 +16,12 @@ class scrCars extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Center(
+          child: Text('Каталог',
+              style: TextStyle(fontSize: 40),
+          )
+      )
+      ),
       body: Container(
           color: Colors.white,
           padding: EdgeInsets.all(20),
@@ -41,27 +49,39 @@ class scrCars extends StatelessWidget {
                   softWrap: true,
                 ),
                 Text(
-                  "Цена: " + Cars[index].Price as String,
+                  "Цена: от " + Cars[index].Price.toString(),
                   style: TextStyle(fontSize: 10, color: Colors.black),
                   softWrap: true,
                 ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Container(
-                    width: 80,
-                    child: Row(
-                      children: [
-                        BasketButton(index,false, "Добавить в корзину"),
-                        FavoriteButton(index, "Добавить в избранное"),
-                      ],
-                    ),
+                Expanded(
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: ElevatedButton(
+                          child: Text("Купить"),
+                          onPressed: () {
+                            PurchasedList.add(Cars[index]);
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => Purchased()));
+                          },
+                        ),
+                        flex: 3,
+                      ),
+                      Expanded(
+                        child: BasketButton(index, false, "Добавить в корзину"),
+                        flex: 1,
+                      ),
+                      Expanded(
+                        child: FavoriteButton(index, "Добавить в избранное"),
+                        flex: 1,
+                      ),
+                    ],
                   ),
                 ),
               ]));
             },
           )),
-      bottomNavigationBar:
-          BottomBar(),
+      bottomNavigationBar: BottomBar(),
     );
   }
 }
