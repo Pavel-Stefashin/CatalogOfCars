@@ -4,7 +4,7 @@ import '../items/basket_list.dart';
 import '../items/bottom_bar.dart';
 import '../items/cars_list.dart';
 import '../items/favorite_button_st_full.dart';
-import 'cars_card.dart';
+import 'car_card.dart';
 
 class FavoriteScr extends StatelessWidget {
   FavoriteScr();

@@ -6,7 +6,7 @@ import '../../items/basket_button_st_full.dart';
 import '../../items/bottom_bar.dart';
 import '../../items/cars_list.dart';
 import '../../items/favorite_button_st_full.dart';
-import '../cars_card.dart';
+import '../car_card.dart';
 import '../favorite.dart';
 import '../purchase.dart';
 import '../../items/purchased_list.dart';

@@ -43,22 +43,25 @@ class _BottomBarState extends State<BottomBar> {
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
           label: 'Каталог',
+            backgroundColor: Color.fromRGBO(110, 66, 190, 0.8274509803921568)
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.shopping_basket),
           label: 'Корзина',
+            backgroundColor: Color.fromRGBO(110, 66, 190, 0.8274509803921568)
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.favorite),
           label: 'Избранное',
+            backgroundColor: Color.fromRGBO(110, 66, 190, 0.8274509803921568)
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.history),
           label: 'Покупки',
+            backgroundColor: Color.fromRGBO(110, 66, 190, 0.8274509803921568)
         ),
       ],
       currentIndex: _selectedIndex,
-      selectedItemColor: Color.fromARGB(255, 140, 73, 255),
       onTap: _onItemTapped,
     );
   }

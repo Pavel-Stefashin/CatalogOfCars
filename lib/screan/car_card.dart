@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:laba2/items/purchased_button.dart';
 import '../../items/cars_list.dart';
 import '../items/basket_button_st_full.dart';
+import '../items/bottom_bar.dart';
 import '../items/favorite_button_st_full.dart';
 import '../items/you_tube.dart';
 
@@ -85,7 +86,7 @@ class CarsCard extends StatelessWidget {
                     Container(
                       margin: EdgeInsets.only(top: 8, bottom: 16),
                       width: MediaQuery.of(context).size.width * 0.8,
-                      height: MediaQuery.of(context).size.height * 0.2,
+                      height: MediaQuery.of(context).size.height * 0.4,
                       child: ListView(children: [
                         Expanded(
                           child: Text(
@@ -178,6 +179,7 @@ class CarsCard extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: BottomBar(),
     );
   }
 }

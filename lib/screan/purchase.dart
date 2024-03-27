@@ -10,10 +10,8 @@ class Purchased extends StatefulWidget {
 }
 
 class _PurchasedState extends State<Purchased> {
-  int count_of_product = 1;
 
   _PurchasedState();
-
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +19,7 @@ class _PurchasedState extends State<Purchased> {
       appBar: AppBar(
           title: Center(
               child: Text(
-        'Покупка',
+        'Покупки',
         style: TextStyle(fontSize: 40),
       ))),
       body: Container(
@@ -30,36 +28,12 @@ class _PurchasedState extends State<Purchased> {
             itemBuilder: (BuildContext context, int index) {
               return Container(
                 child: Row(children: [
-                  Expanded(
-                    child: Image.network(PurchasedList[index].Photo[0]),
-                  ),
-                  Column(children: [
+                  Container(
+                    height: MediaQuery.of(context).size.height * 0.1,
+                    child: Image.network(PurchasedList[index].Photo[0]),),
                     Text(PurchasedList[index].Name),
+                    SizedBox(width: 20,),
                     Text("Цена: " + PurchasedList[index].Price.toString()),
-                  ]),
-                  Text("Количество: " + count_of_product.toString()),
-                  Expanded(
-                    child: Column(children: [
-                      IconButton(
-                          icon: Icon(Icons.exposure_plus_1),
-                          iconSize: 15.0,
-                          color: Colors.blue,
-                          onPressed: () {
-                            setState(() {
-                              count_of_product++;
-                            });
-                          }),
-                      IconButton(
-                          icon: Icon(Icons.exposure_minus_1),
-                          iconSize: 15.0,
-                          color: Colors.blue,
-                          onPressed: () {
-                            setState(() {
-                              count_of_product--;
-                            });
-                          }),
-                    ]),
-                  ),
                 ]),
               );
             }),
