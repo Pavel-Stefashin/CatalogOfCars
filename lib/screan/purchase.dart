@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../items/bottom_bar.dart';
 import '../items/purchased_list.dart';
 
 class Purchased extends StatefulWidget {
@@ -12,6 +13,7 @@ class _PurchasedState extends State<Purchased> {
   int count_of_product = 1;
 
   _PurchasedState();
+
 
   @override
   Widget build(BuildContext context) {
@@ -62,6 +64,7 @@ class _PurchasedState extends State<Purchased> {
               );
             }),
       ),
+      bottomNavigationBar: BottomBar(),
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:laba2/items/basket_list.dart';
 import 'package:laba2/items/favorite_list.dart';
+import 'package:laba2/items/purchased_button.dart';
 import '../../items/basket_button_st_full.dart';
 import '../../items/bottom_bar.dart';
 import '../../items/cars_list.dart';
@@ -58,13 +59,7 @@ class scrCars extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Expanded(
-                        child: ElevatedButton(
-                          child: Text("Купить"),
-                          onPressed: () {
-                            PurchasedList.add(Cars[index]);
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => Purchased()));
-                          },
-                        ),
+                        child: PurchasedButton(index, 1),
                         flex: 3,
                       ),
                       Expanded(

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../screan/Catalogs/cars.dart';
 import '../screan/basket.dart';
 import '../screan/favorite.dart';
+import '../screan/purchase.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({super.key});
@@ -18,45 +19,46 @@ class _BottomBarState extends State<BottomBar> {
     setState(() {
       _selectedIndex = index;
 
-      if(_selectedIndex == 0){
+      if (_selectedIndex == 0) {
         Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => scrCars()));
+            context, MaterialPageRoute(builder: (context) => scrCars()));
+      } else if (_selectedIndex == 1) {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => BascketScr()));
+      } else if (_selectedIndex == 2) {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => FavoriteScr()));
       }
-      else if(_selectedIndex == 1){
+      else if(_selectedIndex == 3){
         Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => BascketScr()));
-      }
-      else if(_selectedIndex == 2){
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => FavoriteScr()));
+            context, MaterialPageRoute(builder: (context) => Purchased()));
       }
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(items: const <BottomNavigationBarItem>[
-      BottomNavigationBarItem(
-        icon: Icon(Icons.home),
-        label: 'Каталог',
-      ),
-      BottomNavigationBarItem(
-        icon: Icon(Icons.shopping_basket),
-        label: 'Корзина',
-      ),
-      BottomNavigationBarItem(
-        icon: Icon(Icons.favorite),
-        label: 'Избранное',
-      ),
-    ],
+    return BottomNavigationBar(
+      items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home),
+          label: 'Каталог',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.shopping_basket),
+          label: 'Корзина',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.favorite),
+          label: 'Избранное',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.history),
+          label: 'Покупки',
+        ),
+      ],
       currentIndex: _selectedIndex,
-      //selectedItemColor: Color.fromARGB(255, 140, 73, 255),
+      selectedItemColor: Color.fromARGB(255, 140, 73, 255),
       onTap: _onItemTapped,
     );
   }
