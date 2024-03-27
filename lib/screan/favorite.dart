@@ -4,16 +4,22 @@ import '../items/basket_list.dart';
 import '../items/bottom_bar.dart';
 import '../items/cars_list.dart';
 import '../items/favorite_button_st_full.dart';
-import 'cars_card.dart';
+import 'car_card.dart';
 
 class FavoriteScr extends StatelessWidget {
-
   FavoriteScr();
 
   @override
   Widget build(BuildContext context) {
-
-    return Scaffold(appBar: AppBar(title: Text('Избранное', style: TextStyle(fontSize: 40,),),),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Избранное',
+          style: TextStyle(
+            fontSize: 40,
+          ),
+        ),
+      ),
       body: Container(
           color: Colors.white,
           padding: EdgeInsets.all(20),
@@ -27,31 +33,34 @@ class FavoriteScr extends StatelessWidget {
             itemBuilder: (BuildContext context, int index) {
               return Expanded(
                   child: Column(children: <Widget>[
-                    TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => CarsCard(FavoriteList[index].Id)));
-                        },
-                        child: Image.network(FavoriteList[index].Photo[0])),
-                    Text(
-                      FavoriteList[index].Name,
-                      style: TextStyle(fontSize: 10, color: Colors.black),
-                      softWrap: true,
-                    ),
-                    Text(
-                      "Цена: " + FavoriteList[index].Price as String,
-                      style: TextStyle(fontSize: 10, color: Colors.black),
-                      softWrap: true,
-                    ),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: Container(
-                        width: 80,
-                        child: Row(
-                          children: [
-                            IconButton(
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  CarsCard(FavoriteList[index].Id)));
+                    },
+                    child: Image.network(FavoriteList[index].Photo[0])),
+                Text(
+                  FavoriteList[index].Name,
+                  style: TextStyle(fontSize: 10, color: Colors.black),
+                  softWrap: true,
+                ),
+                Text(
+                  "Цена: от " + FavoriteList[index].Price.toString(),
+                  style: TextStyle(fontSize: 10, color: Colors.black),
+                  softWrap: true,
+                ),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Container(
+                    width: 80,
+                    child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Expanded(
+                            child: IconButton(
                               icon: Icon(Icons.shopping_basket_outlined),
                               iconSize: 15.0,
                               color: Colors.blue,
@@ -61,16 +70,18 @@ class FavoriteScr extends StatelessWidget {
                               tooltip: 'Добавить в карзину',
                               splashColor: Colors.blueAccent,
                             ),
-                            FavoriteButton(FavoriteList[index].Id, "Удалить из избранного"),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ]));
+                          ),
+                          Expanded(
+                            child: FavoriteButton(FavoriteList[index].Id,
+                                "Удалить из избранного"),
+                          ),
+                        ]),
+                  ),
+                ),
+              ]));
             },
           )),
-      bottomNavigationBar:
-      BottomBar(),
+      bottomNavigationBar: BottomBar(),
     );
   }
 }

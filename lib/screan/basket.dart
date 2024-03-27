@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import '../items/basket_button_st_full.dart';
 import '../items/basket_list.dart';
 import '../items/bottom_bar.dart';
-import 'cars_card.dart';
+import '../items/purchased_button.dart';
+import 'car_card.dart';
 
 class BascketScr extends StatelessWidget {
 
@@ -39,17 +40,17 @@ class BascketScr extends StatelessWidget {
                       softWrap: true,
                     ),
                     Text(
-                      "Цена: " + BascketList[index].Price as String,
+                      "Цена: от " + BascketList[index].Price.toString(),
                       style: TextStyle(fontSize: 10, color: Colors.black),
                       softWrap: true,
                     ),
                     Align(
                       alignment: Alignment.centerRight,
-                      child: Container(
-                        width: 80,
+                      child: Expanded(
                         child: Row(
                           children: [
-                            BasketButton(BascketList[index].Id, true, "Удалить из корзины"),
+              Expanded( child: PurchasedButton(BascketList[index].Id,1), flex: 3),
+              Expanded( child: BasketButton(BascketList[index].Id, true, "Удалить из корзины"), flex: 1),
                           ],
                         ),
                       ),

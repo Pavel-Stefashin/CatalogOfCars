@@ -1,12 +1,18 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:laba2/items/purchased_button.dart';
 import '../../items/cars_list.dart';
+import '../items/basket_button_st_full.dart';
+import '../items/bottom_bar.dart';
+import '../items/favorite_button_st_full.dart';
 import '../items/you_tube.dart';
 
 class CarsCard extends StatelessWidget {
   int Id;
 
   CarsCard(this.Id);
+
+  final myController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -27,14 +33,14 @@ class CarsCard extends StatelessWidget {
                 child: ListView(
                   children: [
                     Container(
-
                         width: MediaQuery.of(context).size.width * 0.8,
                         height: MediaQuery.of(context).size.height * 0.3,
                         child: CarouselSlider.builder(
                           itemCount: Cars[Id].Photo.length,
                           itemBuilder: (BuildContext context, int index,
                                   int pageViewIndex) =>
-                              Container(child: Image.network(Cars[Id].Photo[index])),
+                              Container(
+                                  child: Image.network(Cars[Id].Photo[index])),
                           options: CarouselOptions(
                             height: MediaQuery.of(context).size.height * 0.8,
                           ),
@@ -44,11 +50,27 @@ class CarsCard extends StatelessWidget {
                       width: MediaQuery.of(context).size.width * 0.8,
                       height: MediaQuery.of(context).size.height * 0.05,
                       child: Text(
-                        "Цена: " + Cars[Id].Price,
+                        "Цена: от " + Cars[Id].Price.toString(),
                         style: TextStyle(
                           fontSize: 30,
                         ),
                       ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 8),
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      height: MediaQuery.of(context).size.height * 0.05,
+                      child: Row(children: [
+                        Expanded(child: PurchasedButton(Cars[Id].Id, 1), flex: 4),
+                        Expanded(
+                          child: BasketButton(Cars[Id].Id, false, "Добавить в корзину"),
+                          flex: 1,
+                        ),
+                        Expanded(
+                          child: FavoriteButton(Cars[Id].Id, "Добавить в избранное"),
+                          flex: 1,
+                        ),
+                      ]), //),
                     ),
                     Container(
                       margin: EdgeInsets.only(top: 24),
@@ -64,7 +86,7 @@ class CarsCard extends StatelessWidget {
                     Container(
                       margin: EdgeInsets.only(top: 8, bottom: 16),
                       width: MediaQuery.of(context).size.width * 0.8,
-                      height: MediaQuery.of(context).size.height * 0.2,
+                      height: MediaQuery.of(context).size.height * 0.4,
                       child: ListView(children: [
                         Expanded(
                           child: Text(
@@ -157,6 +179,7 @@ class CarsCard extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: BottomBar(),
     );
   }
 }

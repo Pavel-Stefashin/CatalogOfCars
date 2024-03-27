@@ -4,7 +4,7 @@ class Car{
   String Name;
   List<String> Photo;
   String Description;
-  String Price;
+  int Price;
   String PackageName;
   String BodyType;
   String TransmissionType;
