@@ -48,5 +48,7 @@
 
 # Экран "Профиль"
 
+Из профиля можно перейти в список покупок
+
 <img width="545" alt="image" src="https://github.com/Pavel-Stefashin/CatalogOfCars/assets/135818098/30bb0685-81e3-4b9d-8043-0486bb824d94">
 
