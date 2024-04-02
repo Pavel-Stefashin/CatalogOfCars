@@ -30,7 +30,7 @@ class Login extends StatelessWidget {
                       //     label: Text("Войти")),
                        Container(padding: EdgeInsets.only(top: 8, bottom: 8),
                          child: FloatingActionButton.extended(onPressed: (){
-                         Navigator.push(context, MaterialPageRoute(builder: (context) => scrCars()));},
+                         Navigator.push(context, MaterialPageRoute(builder: (context) => CarsScr()));},
                            label: Text("Каталог машин")),),
                       TextButton(onPressed: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context) => Authorization()));

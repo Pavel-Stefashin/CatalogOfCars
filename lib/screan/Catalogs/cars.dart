@@ -11,8 +11,8 @@ import '../favorite.dart';
 import '../purchase.dart';
 import '../../items/purchased_list.dart';
 
-class scrCars extends StatelessWidget {
-  scrCars({Key? key}) : super(key: key);
+class CarsScr extends StatelessWidget {
+  CarsScr({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

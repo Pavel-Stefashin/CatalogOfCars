@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../screan/Catalogs/cars.dart';
 import '../screan/basket.dart';
 import '../screan/favorite.dart';
+import '../screan/profile.dart';
 import '../screan/purchase.dart';
 
 class BottomBar extends StatefulWidget {
@@ -21,7 +22,7 @@ class _BottomBarState extends State<BottomBar> {
 
       if (_selectedIndex == 0) {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => scrCars()));
+            context, MaterialPageRoute(builder: (context) => CarsScr()));
       } else if (_selectedIndex == 1) {
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => BascketScr()));
@@ -31,7 +32,7 @@ class _BottomBarState extends State<BottomBar> {
       }
       else if(_selectedIndex == 3){
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => Purchased()));
+            context, MaterialPageRoute(builder: (context) => ProfileScr(0)));
       }
     });
   }
@@ -56,8 +57,8 @@ class _BottomBarState extends State<BottomBar> {
             backgroundColor: Color.fromRGBO(110, 66, 190, 0.8274509803921568)
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.history),
-          label: 'Покупки',
+          icon: Icon(Icons.person),
+          label: 'Профиль',
             backgroundColor: Color.fromRGBO(110, 66, 190, 0.8274509803921568)
         ),
       ],
