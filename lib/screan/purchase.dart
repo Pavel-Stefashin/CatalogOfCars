@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import '../items/bottom_bar.dart';
 import '../items/purchased_list.dart';
 
-class Purchased extends StatefulWidget {
-  const Purchased({Key? key}) : super(key: key);
+class PurchasedScr extends StatefulWidget {
+  const PurchasedScr({Key? key}) : super(key: key);
 
   @override
-  State<Purchased> createState() => _PurchasedState();
+  State<PurchasedScr> createState() => _PurchasedScrState();
 }
 
-class _PurchasedState extends State<Purchased> {
+class _PurchasedScrState extends State<PurchasedScr> {
 
-  _PurchasedState();
+  _PurchasedScrState();
 
   @override
   Widget build(BuildContext context) {
