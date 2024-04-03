@@ -29,19 +29,30 @@ class _FavoriteButtonState extends State<FavoriteButton> {
       iconSize: 15.0,
       color: Colors.red,
       onPressed: () {
+
+
         final res = FavoriteList.where(
                 (element) => element == Cars[ID]).toList();
         if (res.length == 0) {
+          Cars[ID].InFavorite = true;
+          FavoriteList.add(Cars[ID]);
+        } else {
+          Cars[ID].InFavorite = false;
+          FavoriteList.remove(Cars[ID]);
+        }
+
+        if(Cars[ID].InFavorite)
+        {
           setState(() {
             _icon = Icon(Icons.favorite);
           });
-          FavoriteList.add(Cars[ID]);
-        } else {
+        }
+        else{
           setState(() {
             _icon = Icon(Icons.favorite_border);
           });
-          FavoriteList.remove(Cars[ID]);
         }
+
       },
       tooltip: Text,
       splashColor: Colors.redAccent,
