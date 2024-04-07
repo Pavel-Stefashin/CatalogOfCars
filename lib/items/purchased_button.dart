@@ -26,7 +26,8 @@ class PurchasedButton extends StatelessWidget {
           ),
           TextButton(
             onPressed: () {Navigator.pop(context, 'Да');
-            PurchasedList.add(Cars[index]);},
+            PurchasedList.add(Cars[index]);
+            Cars[index].Count ++;},
             child: const Text('Да'),
           ),
         ],

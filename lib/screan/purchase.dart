@@ -34,6 +34,7 @@ class _PurchasedScrState extends State<PurchasedScr> {
                     Text(PurchasedList[index].Name),
                     SizedBox(width: 20,),
                     Text("Цена: " + PurchasedList[index].Price.toString()),
+                  Text(" Количество: " + PurchasedList[index].Count.toString()),
                 ]),
               );
             }),

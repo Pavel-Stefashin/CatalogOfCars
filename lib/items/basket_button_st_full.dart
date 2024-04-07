@@ -31,14 +31,34 @@ class _BasketButtonState extends State<BasketButton> {
       iconSize: 15.0,
       color: Colors.blue,
       onPressed: () {
+        if(Cars[ID].InBasket)
+        {
+          setState(() {
+            _icon = Icon(Icons.shopping_basket_outlined);
+          });
+        }
+        else
+        {
+          setState(() {
+            _icon = Icon(Icons.shopping_basket);
+          });
+        }
+
         if(Delete){
           BascketList.remove(Cars[ID]);
         }
         else{
-          setState(() {
-            _icon = Icon(Icons.shopping_basket);
-          });
-          BascketList.add(Cars[ID]);
+          final res = BascketList.where(
+                  (element) => element == Cars[ID]).toList();
+          if(res.length == 0)
+          {
+            BascketList.add(Cars[ID]);
+            Cars[ID].Count = 1;
+          }
+          else
+          {
+            Cars[ID].Count ++;
+          }
         }
       },
       tooltip: Text,
